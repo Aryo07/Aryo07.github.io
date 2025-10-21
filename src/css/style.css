@@ -40,9 +40,11 @@ h1 {
   opacity: 0.8;
 }
 
+/* NAVIGATION */
 .nav-bar {
   text-align: center;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 .nav-bar button {
   background: transparent;
@@ -51,7 +53,7 @@ h1 {
   font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
   padding: 0.4rem 1rem;
-  margin: 0 0.5rem;
+  margin: 0.4rem 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease;
   border-radius: 4px;
@@ -67,6 +69,7 @@ h1 {
   box-shadow: 0 0 15px var(--accent);
 }
 
+/* PROFILE */
 .profile-photo {
   width: 120px !important;
   height: 120px !important;
@@ -75,12 +78,13 @@ h1 {
   box-shadow: 0 0 18px var(--accent);
 }
 
+/* CONTENT SECTIONS */
 section {
   max-width: 750px;
   margin: 2rem auto;
   padding: 1rem;
   border-left: 2px solid var(--dim);
-  padding-bottom: 3.5rem; /* agar konten tidak tertutup footer */
+  padding-bottom: 3.5rem;
 }
 section h2 {
   color: var(--accent);
@@ -100,6 +104,7 @@ ul li::before {
   color: var(--accent);
 }
 
+/* FOOTER */
 footer {
   position: fixed;
   bottom: 0;
@@ -115,7 +120,7 @@ footer {
   backdrop-filter: blur(2px);
 }
 
-/* Loading screen */
+/* LOADING SCREEN */
 .loading-screen {
   position: fixed;
   inset: 0;
@@ -275,66 +280,103 @@ footer {
   display: block;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  body {
-    font-size: 0.95rem;
+/* ======================== */
+/* RESPONSIVE DESIGN */
+/* ======================== */
+
+/* Tablets (portrait & landscape) */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
   }
-  header {
-    padding-top: 1.2rem;
+  section {
+    max-width: 90%;
+    padding: 1rem;
   }
   .profile-photo {
-    width: 120px !important;
-    height: 120px !important;
-    margin-bottom: 0.7rem;
-    border-radius: 50%;
-    box-shadow: 0 0 18px var(--accent);
-  }
-  h1 {
-    font-size: 1.2rem;
-  }
-  .subtitle {
-    font-size: 0.8rem;
-  }
-  .nav-bar {
-    margin-top: 1rem;
+    width: 100px !important;
+    height: 100px !important;
   }
   .nav-bar button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Mobile large (e.g., iPhone Plus) */
+@media (max-width: 768px) {
+  header {
+    padding-top: 2.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .subtitle {
     font-size: 0.85rem;
-    padding: 0.3rem 0.7rem;
-    margin: 0.3rem 0.25rem;
-    /* Tambah jarak vertikal antar tombol */
-    display: inline-block;
   }
   .nav-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.3rem 0.25rem;
+    gap: 0.4rem;
+  }
+  .nav-bar button {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
   }
   section {
-    max-width: 98vw;
-    margin: 1rem auto;
-    padding: 0.5rem;
-    border-left: 1px solid var(--dim);
-    font-size: 0.97em;
-    padding-bottom: 4.5rem; /* lebih besar di mobile agar tidak tertutup footer */
-  }
-  ul {
-    padding-left: 0.5rem;
+    border-left: none;
+    border-top: 1px solid var(--dim);
+    margin: 1.5rem 1rem;
+    padding: 1rem 0.5rem 3.5rem;
   }
   footer {
     font-size: 0.8em;
     padding: 6px 0;
   }
-  .loading-screen {
+}
+
+/* Mobile small (≤480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+  .subtitle {
+    font-size: 0.8rem;
+  }
+  .profile-photo {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .nav-bar button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.25rem;
+  }
+  section {
+    padding: 0.8rem 0.4rem 3.5rem;
+  }
+  ul {
+    padding-left: 0.6rem;
+  }
+  ul li::before {
+    margin-right: 4px;
+  }
+  .loader-text {
     font-size: 1rem;
   }
-  .loader-icon {
-    margin-bottom: 0.7rem;
-  }
   .loader-bar {
-    width: 140px;
+    width: 180px;
     height: 6px;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1400px) {
+  section {
+    max-width: 950px;
+  }
+  h1 {
+    font-size: 2.3rem;
   }
 }
