@@ -10,6 +10,7 @@
     <script defer src="src/js/script.js"></script>
 </head>
 <body>
+  <!--  Loading Screen -->
     <div class="loading-screen">
         <div class="loader-icon">
             <svg width="48" height="48" viewBox="0 0 48 48">
@@ -24,14 +25,18 @@
             <div class="loader-progress"></div>
         </div>
     </div>
+    <!--  End Loading Screen -->
 
     <main class="terminal hidden">
+      <!-- Header Section -->
         <header>
             <img src="https://api.dicebear.com/9.x/fun-emoji/svg?seed=Aryo Kesuma" alt="Aryo Kesuma" class="profile-photo" style="width: 200px; height: 200px;" />
             <h1>👾 <span class="blink">></span> Aryo Kesuma</h1>
             <p class="subtitle">Welcome to my Portofolio</p>
         </header>
+        <!-- End Header Section -->
 
+      <!-- Navigation Bar -->
         <nav class="nav-bar fade-in">
             <button data-section="about">/about</button>
             <button data-section="skills">/skills</button>
@@ -41,42 +46,51 @@
             <button data-section="projects">/projects</button>
             <button data-section="contact">/contact</button>
         </nav>
+      <!-- End Navigation Bar -->
 
+      <!-- About Section -->
         <section id="about" class="content-section active fade-in">
             <h2>~/about</h2>
-            <p>Hi, I’m Aryo—a software developer from Indonesia with a strong passion for backend engineering. Since 2021, I’ve been building reliable and scalable software solutions, mainly using <span class="highlight">Go</span> and <span class="highlight">Laravel</span> for backend development. I also enjoy working with modern frontend frameworks like <span class="highlight">Svelte</span>, <span class="highlight">Vue</span>, <span class="highlight">React</span>, and <span class="highlight">Livewire</span> to create seamless user experiences.</p>
+            <p>Hi, I’m <b>Aryo Kesuma</b> - a <b>Software Developer</b> from Indonesia with a strong passion for backend engineering. Since 2021, I’ve been building reliable and scalable software solutions, mainly using <span class="highlight">Go</span> and <span class="highlight">Laravel</span> for backend development. I also enjoy working with modern frontend frameworks like <span class="highlight">Svelte</span>, <span class="highlight">Vue</span>, <span class="highlight">React</span>, and <span class="highlight">Livewire</span> to create seamless user experiences.</p>
             <p>Throughout my career, I’ve contributed to a variety of projects, ranging from full-stack web applications to mobile apps. I take pride in writing clean, maintainable code and collaborating with others to tackle complex challenges.</p>
             <p>I’m always eager to learn new technologies and bring innovative ideas to life. Let’s connect and create something impactful together!</p>
         </section>
+      <!-- End About Section -->
 
+      <!-- Skills Section -->
         <section id="skills" class="content-section fade-in">
             <h2>~/skills</h2>
             <ul>
-                <li>💻 Frontend Development
+                <li>💻 <b>Frontend Development</b>
                   <ul>
-                    <li>HTML5/CSS - TailwindCSS, Bootstrap</li>
-                    <li>JavaScript - DOM Manipulation, JQuery, Ajax</li>
-                    <li>Vue — Composition API, Pinia/Vuex, Vue Router</li>
+                    <li><b><span class="highlight">HTML5/CSS</span></b> - TailwindCSS, Bootstrap</li>
+                    <li><b><span class="highlight">JavaScript</span></b> - DOM Manipulation, JQuery, Ajax</li>
+                    <li><b><span class="highlight">Vue</span></b> — Composition API, Pinia/Vuex, Vue Router</li>
                   </ul>
                 </li>
-                <li>🛠️ Backend Development
+                <br>
+                <li>🛠️ <b>Backend Development</b>
                   <ul>
-                  <li>Golang - Gin, Gorm, Echo</li>
-                  <li>Laravel (PHP) - Eloquent, Blade, Livewire</li>
-                  <li>RESTful API Design - Sanctum, JWT, OAuth2</li>
-                  <li>MySQL, PostgreSQL - Database Design, Optimization</li>
+                    <li><b><span class="highlight">Golang</span></b> - Gin, Gorm, Echo</li>
+                    <li><b><span class="highlight">Laravel (PHP)</span></b> - Eloquent, Blade, Livewire</li>
+                    <li><b><span class="highlight">RESTful API Design</span></b> - Sanctum, JWT, OAuth2</li>
+                    <li><b><span class="highlight">MySQL</span></b>, <b>PostgreSQL</b> - Database Design, Optimization</li>
                   </ul>
                 </li>
-                <li>🎨 Design & Tools
+                <br>
+                <li>🎨 <b>Design & Tools</b>
                   <ul>
-                    <li>Figma - UI/UX Design</li>
-                    <li>Git/Github - Version Control</li>
-                    <li>Docker - Containerization</li>
+                    <li><b><span class="highlight">Figma</span></b> - UI/UX Design, Prototyping</li>
+                    <li><b><span class="highlight">Git</span></b> - Version Control, Collaboration (GitHub, GitLab)</li>
+                    <li><b><span class="highlight">Docker</span></b> - Containerization, Deployment</li>
+                    <li><b><span class="highlight">Linux</span></b> - Server Management, Shell Scripting</li>
                   </ul>
                 </li>
             </ul>
         </section>
+      <!-- End Skills Section -->
 
+      <!-- Experience Section -->
         <section id="experience" class="content-section fade-in">
             <h2>~/experience</h2>
             <ul>
@@ -84,47 +98,58 @@
                 <li>🏛️ <b>Government Project</b> — Developed internal system modules for admin use</li>
             </ul>
         </section>
+      <!-- End Experience Section -->
 
+      <!-- Education Section -->
         <section id="education" class="content-section fade-in">
             <h2>~/education</h2>
             <ul>
-                <li>🎓 Bachelor of Accounting (S-1)</li>
-                <li>💡 Self-taught in programming, focusing on Laravel ecosystem, Golang, and Vue</li>
+                <li>🎓 <b>Bachelor of Accounting (S-1)</b> - Universitas Pembangunan Nasional "Veteran" Yk</li>
+                <li>💡 <b>Self-taught in programming and also participated in online training classes</b>, focusing on the <span class="highlight">Laravel</span>, <span class="highlight">Golang</span>, and <span class="highlight">Vue</span> ecosystems.</li>
             </ul>
         </section>
+      <!-- End Education Section -->
 
+      <!-- Certifications Section -->
         <section id="certifications" class="content-section fade-in">
             <h2>~/certifications</h2>
             <ul>
-                <li>🧾 Web Developer Competency Certificate — BNSP (National Professional Certification Agency)</li>
-                <li>🧾 CAWD© (Certified Associate Web Developer) - LKP Syntax Training Centre</li>
-                <li>🧾 Fullstack Web Developer - Syneps Academy</li>
-                <li>🧾 Laravel Advanced Course — Udemy</li>
-                <li>🧾 PHP Advanced Course — Udemy</li>
-                <li>🧾 MySQL Advanced Course — Udemy</li>
-                <li>🧾 GIT Advanced Course — Udemy</li>
+                <li>🧾 <b>Web Developer Competency Certificate</b> — BNSP (National Professional Certification Agency)</li>
+                <li>🧾 <b>CAWD© (Certified Associate Web Developer)</b> - LKP Syntax Training Centre</li>
+                <li>🧾 <b>Fullstack Web Developer</b> - Syneps Academy</li>
+                <li>🧾 <b>Laravel Advanced Course</b> — Udemy</li>
+                <li>🧾 <b>PHP Advanced Course</b> — Udemy</li>
+                <li>🧾 <b>MySQL Advanced Course</b> — Udemy</li>
+                <li>🧾 <b>GIT Advanced Course</b> — Udemy</li>
             </ul>
         </section>
+      <!-- End Certifications Section -->
 
+      <!-- Projects Section -->
         <section id="projects" class="content-section fade-in">
             <h2>~/projects</h2>
             <ul>
-                <li>📁 <a href="#">BrigdeMapper</a></li>
-                <li>📁 <a href="#">Breezstrap - A Laravel package to use Bootstrap scaffolding with Breeze.</a></li>
-                <li>📁 <a href="#">laravel-installer - Laravel Installer Wizard</a></li>
+                <li>📁 <a href="#"><b>BrigdeMapper</b> <span class="highlight">[Private]</span> - Tool to map and manage bridges data.</a></li>
+                <li>📁 <a href="#"><b>Breezstra</b> <span class="highlight">[Public]</span> - A Laravel package to use Bootstrap scaffolding with Breeze.</a></li>
+                <li>📁 <a href="#"><b>laravel-installer</b> <span class="highlight">[Public]</span> - Laravel Installer Wizard</a></li>
             </ul>
         </section>
+      <!-- End Projects Section -->
 
+      <!-- Contact Section -->
         <section id="contact" class="content-section fade-in">
             <h2>~/contact</h2>
-            <p>📧 <a href="mailto:aryo.kesuma7@gmail.com">aryo.kesuma7@gmail.com</a></p>
-            <p>🌐 <a href="https://github.com/Aryo07" target="_blank">github.com/Aryo07</a></p>
-            <p>🌐 <a href="https://www.linkedin.com/in/aryo-kesuma-7b0b3220b/" target="_blank">linkedin.com/in/aryo-kesuma-7b0b3220b/</a></p>
+            <p>📧 <a href="mailto:aryo.kesuma7@gmail.com"><b>aryo.kesuma7@gmail.com</b></a></p>
+            <p>🌐 <a href="https://github.com/Aryo07" target="_blank"><b>github.com/Aryo07</b></a></p>
+            <p>🌐 <a href="https://www.linkedin.com/in/aryo-kesuma-7b0b3220b/" target="_blank"><b>linkedin.com/in/aryo-kesuma-7b0b3220b/</b></a></p>
         </section>
+        <!-- End Contact Section -->
 
+        <!-- Footer Section -->
         <footer>
             <p class="fade-in">© <span id="year"></span> Aryo Kesuma. All rights reserved. <br> Made with 💚 using HTML, CSS & JavaScript <br> Site signed and maintained by Aryo07</p>
         </footer>
+        <!-- End Footer Section -->
     </main>
 </body>
 </html>
