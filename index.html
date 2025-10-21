@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Terminal | Portfolio</title>
+    <meta name="description" content="Modern developer portfolio with terminal-inspired design">
+    <meta name="author" content="aryokesuma">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer src="src/js/script.js"></script>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48">
+                <rect x="8" y="8" width="32" height="32" rx="6" fill="#00ff66" opacity="0.15"/>
+                <text x="24" y="30" text-anchor="middle" font-size="18" fill="#00ff66">></text>
+            </svg>
+        </div>
+        <div class="loader-text typewriter">
+            <span id="loader-message">Initializing system</span><span class="glitch"></span><span class="dots"></span>
+        </div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <main class="terminal hidden">
+        <header>
+            <img src="https://api.dicebear.com/9.x/fun-emoji/svg?seed=Aryo Kesuma" alt="Aryo Kesuma" class="profile-photo" style="width: 200px; height: 200px;" />
+            <h1>👾 <span class="blink">></span> Aryo Kesuma</h1>
+            <p class="subtitle">Welcome to my Portofolio</p>
+        </header>
+
+        <nav class="nav-bar fade-in">
+            <button data-section="about">/about</button>
+            <button data-section="skills">/skills</button>
+            <button data-section="experience">/experience</button>
+            <button data-section="education">/education</button>
+            <button data-section="certifications">/certifications</button>
+            <button data-section="projects">/projects</button>
+            <button data-section="contact">/contact</button>
+        </nav>
+
+        <section id="about" class="content-section active fade-in">
+            <h2>~/about</h2>
+            <p>Hi, I’m Aryo—a software developer from Indonesia with a strong passion for backend engineering. Since 2021, I’ve been building reliable and scalable software solutions, mainly using <span class="highlight">Go</span> and <span class="highlight">Laravel</span> for backend development. I also enjoy working with modern frontend frameworks like <span class="highlight">Svelte</span>, <span class="highlight">Vue</span>, <span class="highlight">React</span>, and <span class="highlight">Livewire</span> to create seamless user experiences.</p>
+            <p>Throughout my career, I’ve contributed to a variety of projects, ranging from full-stack web applications to mobile apps. I take pride in writing clean, maintainable code and collaborating with others to tackle complex challenges.</p>
+            <p>I’m always eager to learn new technologies and bring innovative ideas to life. Let’s connect and create something impactful together!</p>
+        </section>
+
+        <section id="skills" class="content-section fade-in">
+            <h2>~/skills</h2>
+            <ul>
+                <li>💻 Laravel / Livewire / Vue</li>
+                <li>🐹 Golang</li>
+                <li>🧠 System Design & Architecture</li>
+                <li>📊 Accounting System Development</li>
+                <li>⚡ Terminal-inspired UI/UX</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="content-section fade-in">
+            <h2>~/experience</h2>
+            <ul>
+                <li>👨‍💻 <b>Freelance Developer</b> — Building custom Laravel applications (2021–Present)</li>
+                <li>🏛️ <b>Government Project</b> — Developed internal system modules for admin use</li>
+            </ul>
+        </section>
+
+        <section id="education" class="content-section fade-in">
+            <h2>~/education</h2>
+            <ul>
+                <li>🎓 Bachelor of Accounting (S-1)</li>
+                <li>💡 Self-taught in programming, focusing on Laravel ecosystem</li>
+            </ul>
+        </section>
+
+        <section id="certifications" class="content-section fade-in">
+            <h2>~/certifications</h2>
+            <ul>
+                <li>🧾 Laravel Advanced Course — Udemy</li>
+                <li>🔐 Web Security Fundamentals — freeCodeCamp</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="content-section fade-in">
+            <h2>~/projects</h2>
+            <ul>
+                <li>📁 <a href="#">BrigdeMapper</a></li>
+                <li>📁 <a href="#">Breezstrap - A Laravel package to use Bootstrap scaffolding with Breeze.</a></li>
+                <li>📁 <a href="#">laravel-installer - Laravel Installer Wizard</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" class="content-section fade-in">
+            <h2>~/contact</h2>
+            <p>📧 <a href="mailto:aryo.kesuma7@gmail.com">aryo.kesuma7@gmail.com</a></p>
+            <p>🌐 <a href="https://github.com/Aryo07" target="_blank">github.com/Aryo07</a></p>
+        </section>
+
+        <footer>
+            <p class="fade-in">© <span id="year"></span> Aryo Kesuma. All rights reserved. <br> Made with 💚 using HTML, CSS & JavaScript <br> Site signed and maintained by Aryo07</p>
+        </footer>
+    </main>
+</body>
+</html>

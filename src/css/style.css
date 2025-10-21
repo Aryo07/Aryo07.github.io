@@ -1,0 +1,340 @@
+/* Cyber Terminal Portfolio */
+/* Signed: Aryo Kesuma */
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+:root {
+  --bg-color: #121212;
+  --text-color: #00ff66;
+  --accent: #00cc55;
+  --highlight: #ffea00;
+  --dim: rgba(0, 255, 102, 0.15);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Share Tech Mono", monospace;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-shadow: 0 0 10px var(--accent);
+}
+
+header {
+  text-align: center;
+  padding-top: 3.5rem;
+}
+h1 {
+  font-size: 2rem;
+  text-shadow: 0 0 15px var(--accent);
+}
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.nav-bar {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.nav-bar button {
+  background: transparent;
+  border: 1px solid var(--dim);
+  color: var(--accent);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+.nav-bar button:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent);
+}
+.nav-bar button.active {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.profile-photo {
+  width: 120px !important;
+  height: 120px !important;
+  margin-bottom: 0.7rem;
+  border-radius: 50%;
+  box-shadow: 0 0 18px var(--accent);
+}
+
+section {
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-left: 2px solid var(--dim);
+  padding-bottom: 3.5rem; /* agar konten tidak tertutup footer */
+}
+section h2 {
+  color: var(--accent);
+}
+.highlight {
+  color: var(--highlight);
+  text-shadow: 0 0 10px var(--highlight);
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+ul li::before {
+  content: ">";
+  margin-right: 8px;
+  color: var(--accent);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  text-align: center;
+  padding: 8px 0;
+  border-top: 1px solid #00ff00;
+  font-size: 0.9em;
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
+/* Loading screen */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.2rem;
+  z-index: 1000;
+  letter-spacing: 1px;
+}
+.loader-icon {
+  margin-bottom: 1.2rem;
+  animation: fadeIn 1.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+.loader-text {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  text-shadow: 0 0 12px var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.typewriter #loader-message {
+  overflow: hidden;
+  border-right: 0.12em solid var(--accent);
+  white-space: nowrap;
+  animation: typing 1.6s steps(22, end) 1, blink-caret 0.7s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15ch;
+  }
+}
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent);
+  }
+}
+.glitch {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent), 0 0 2px #fff;
+  animation: glitch 1.2s infinite linear alternate;
+  margin-left: 2px;
+}
+@keyframes glitch {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(2px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dots::after {
+  content: "";
+  animation: dots 1.5s steps(5, end) infinite;
+}
+@keyframes dots {
+  0%,
+  20% {
+    content: "";
+  }
+  40% {
+    content: ".";
+  }
+  60% {
+    content: "..";
+  }
+  80%,
+  100% {
+    content: "...";
+  }
+}
+.loader-bar {
+  width: 220px;
+  height: 8px;
+  background: var(--dim);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 12px var(--accent);
+  margin-top: 0.5rem;
+}
+.loader-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent) 60%, #00ff66 100%);
+  box-shadow: 0 0 16px var(--accent);
+  border-radius: 6px;
+  animation: progressBar 2.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+@keyframes progressBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Fade in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeIn 0.8s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Fade out/in for loader text */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.fade-in-loader {
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* Cursor blink */
+.blink {
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Section switching */
+.content-section {
+  display: none;
+}
+.content-section.active {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+  header {
+    padding-top: 1.2rem;
+  }
+  .profile-photo {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 0.7rem;
+    border-radius: 50%;
+    box-shadow: 0 0 18px var(--accent);
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .subtitle {
+    font-size: 0.8rem;
+  }
+  .nav-bar {
+    margin-top: 1rem;
+  }
+  .nav-bar button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+    margin: 0.3rem 0.25rem;
+    /* Tambah jarak vertikal antar tombol */
+    display: inline-block;
+  }
+  .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem 0.25rem;
+  }
+  section {
+    max-width: 98vw;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-left: 1px solid var(--dim);
+    font-size: 0.97em;
+    padding-bottom: 4.5rem; /* lebih besar di mobile agar tidak tertutup footer */
+  }
+  ul {
+    padding-left: 0.5rem;
+  }
+  footer {
+    font-size: 0.8em;
+    padding: 6px 0;
+  }
+  .loading-screen {
+    font-size: 1rem;
+  }
+  .loader-icon {
+    margin-bottom: 0.7rem;
+  }
+  .loader-bar {
+    width: 140px;
+    height: 6px;
+  }
+}
