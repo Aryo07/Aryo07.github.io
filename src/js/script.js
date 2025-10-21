@@ -1,5 +1,9 @@
 // Cyber Terminal Portfolio with Safe Sound Effects
 document.addEventListener("DOMContentLoaded", () => {
+    // Disable right click (context menu)
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
     const loader = document.querySelector(".loading-screen");
     const terminal = document.querySelector(".terminal");
     const buttons = document.querySelectorAll(".nav-bar button");
