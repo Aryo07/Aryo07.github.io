@@ -1,3 +1,6 @@
+/* Cyber Terminal Portfolio */
+/* Signed: Aryo Kesuma */
+
 // Cyber Terminal Portfolio with Safe Sound Effects
 document.addEventListener("DOMContentLoaded", () => {
     // Disable right click (context menu)
@@ -70,35 +73,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const playClickSound = () => playBeep(300, 50, 0.07);
 
     // Boot animation
-    const LOADING_DELAY = 2200; // 2.2 detik, sama dengan progress bar dan typing
+    const LOADING_DELAY = 2200; // 2.2 seconds, same as progress bar and typing
     setTimeout(() => {
-        // Jika audioCtx sudah aktif, mainkan boot sound dan transisi
-        if (audioCtx) {
-            playBootSound();
-            setTimeout(() => {
-                loader.classList.add("hidden");
-                terminal.classList.remove("hidden");
-            }, 400); // boot sound selesai sebelum transisi
-        } else {
-            // Tampilkan instruksi klik untuk masuk dengan transisi smooth
-            const loaderText = document.querySelector('.loader-text');
-            if (loaderText) {
-                loaderText.classList.add('fade-out');
-                setTimeout(() => {
-                    loaderText.innerHTML = '<span style="color:#00ff66">Click anywhere to enter...</span>';
-                    loaderText.classList.remove('fade-out');
-                    loaderText.classList.add('fade-in-loader');
-                }, 500);
-            }
-            document.body.addEventListener("click", () => {
-                initAudio();
-                playBootSound();
-                setTimeout(() => {
-                    loader.classList.add("hidden");
-                    terminal.classList.remove("hidden");
-                }, 400); // boot sound selesai sebelum transisi
-            }, { once: true });
+      // If audioCtx is already active, play boot sound and transition
+      if (audioCtx) {
+        playBootSound();
+        setTimeout(() => {
+          loader.classList.add("hidden");
+          terminal.classList.remove("hidden");
+        }, 400); // boot sound finishes before transition
+      } else {
+        // Show click instruction to enter with smooth transition
+        const loaderText = document.querySelector('.loader-text');
+        if (loaderText) {
+          loaderText.classList.add('fade-out');
+          setTimeout(() => {
+            loaderText.innerHTML = '<span style="color:#00ff66">Click anywhere to enter...</span>';
+            loaderText.classList.remove('fade-out');
+            loaderText.classList.add('fade-in-loader');
+          }, 500);
         }
+        document.body.addEventListener("click", () => {
+          initAudio();
+          playBootSound();
+          setTimeout(() => {
+            loader.classList.add("hidden");
+            terminal.classList.remove("hidden");
+          }, 400); // boot sound finishes before transition
+        }, { once: true });
+      }
     }, LOADING_DELAY);
 
     // Navigation click logic
